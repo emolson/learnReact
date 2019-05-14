@@ -7,7 +7,7 @@ const burger = (props) => {
     // transform ingredients, object with key value pairs, into an array
     let transformedIngredients = Object.keys(props.ingredients)
         .map(igKey => {
-            // ...Array(#) instatiates an empty array with # of elements
+            // ...Array(#) instantiates an empty array with # of elements
             // .map(_,i) : use _ for unused element, i for index
             return [...Array(props.ingredients[igKey])].map((_, i) =>
                 <BurgerIngredient key={igKey + i} type={igKey}/>
